@@ -1,0 +1,15 @@
+{
+  "storage": {
+    "type": "jsonl",
+    "path": "data/tickets.jsonl"
+  },
+  "channels": {
+    "email": true,
+    "web": true,
+    "cli": true
+  },
+  "summary": {
+    "default_limit": 20
+  }
+}
+

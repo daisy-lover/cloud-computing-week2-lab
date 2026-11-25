@@ -1,0 +1,25 @@
+{
+  "name": "dsh-env-guard",
+  "version": "0.1.0",
+  "description": "DSH pre-execute policy that blocks reads of .env and other secret files",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node ./test/guard.test.mjs"
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.5 <0.3.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}
+

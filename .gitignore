@@ -1,0 +1,17 @@
+.research*/
+.tools/
+.npm-cache/
+.runtime-*/
+.student-smoke/
+*.tgz
+*.zip
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+lab-repo/.env
+lab-repo/.env.*
+!lab-repo/.env.example
+
