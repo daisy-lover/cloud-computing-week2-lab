@@ -53,6 +53,10 @@ Node.js 24 LTS（本次验证时最新 LTS 为 24.22.3）。
 公开仓库地址：
 `https://github.com/daisy-lover/cloud-computing-week2-lab`
 
+助教已完成真实模型验收：Pi 精确/模糊/分叉流程、DSH 无插件泄漏、插件拦截、
+README 反向放行和持久化日志均通过。细节见
+[助教验收记录](docs/助教验收记录.md)。
+
 如果当前网络无法访问 GitHub，也可使用本地实验包完成课堂实验。发布与更新方法
 见 [助教课前检查清单](docs/助教课前检查清单.md#发布到-github)。
 

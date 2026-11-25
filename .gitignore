@@ -1,8 +1,10 @@
 .research*/
 .tools/
 .npm-cache/
+.pnpm-store/
 .runtime-*/
 .student-smoke/
+.model-test-*/
 *.tgz
 *.zip
 

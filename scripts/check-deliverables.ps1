@@ -63,7 +63,7 @@ $authoredExtensions = @("*.md", "*.ps1", "*.js", "*.mjs", "*.json", "*.yml", "*.
 $authoredFiles = foreach ($extension in $authoredExtensions) {
     Get-ChildItem -Path $repoRoot -Recurse -File -Filter $extension |
         Where-Object {
-            $_.FullName -notmatch "\\.research\\|\\.tools\\|\\.npm-cache\\|\\node_modules\\"
+            $_.FullName -notmatch "\\.research\\|\\.tools\\|\\.model-test-|\\.npm-cache\\|\\node_modules\\"
         }
 }
 $secretHits = $authoredFiles | Select-String -Pattern "sk-[A-Za-z0-9]{20,}" -ErrorAction SilentlyContinue
@@ -75,7 +75,7 @@ Write-Host "[PASS] 未发现疑似真实 API Key" -ForegroundColor Green
 $envFiles = Get-ChildItem -Path $repoRoot -Recurse -File -Force |
     Where-Object {
         $_.Name -eq ".env" -and
-        $_.FullName -notmatch "\\.tools\\|\\.research\\"
+        $_.FullName -notmatch "\\.tools\\|\\.research\\|\\.model-test-"
     }
 if ($envFiles) {
     Write-Host "[WARN] 找到本地 .env；发布前确认被 .gitignore 排除：" -ForegroundColor Yellow
