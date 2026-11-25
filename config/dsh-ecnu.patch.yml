@@ -1,0 +1,20 @@
+# Use from the experiment package root:
+#   dsh --profile headless --patch .\config\dsh-ecnu.patch.yml "..."
+#
+# The API key is read from ECNU_CHAT_API_KEY and is never stored here.
+- id: llm-pi-ai
+  config:
+    providers:
+      ecnu-chat:
+        apiKeyEnv: ECNU_CHAT_API_KEY
+        api: openai-completions
+        baseURL: https://chat.ecnu.edu.cn/open/api/v1
+        models:
+          - id: ecnu-plus
+          - id: ecnu-max
+
+- id: agent-default-model
+  config:
+    provider: ecnu-chat
+    model: ecnu-plus
+

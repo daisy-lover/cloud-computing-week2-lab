@@ -124,10 +124,10 @@ if ($pnpmText) {
 }
 
 # Credentials are checked by presence only. Never print their values.
-if ($env:DEEPSEEK_API_KEY -or $env:OPENAI_API_KEY -or $env:COURSE_API_KEY) {
-    Add-Pass "模型凭据环境" "检测到环境变量（值已隐藏）"
+if ($env:ECNU_CHAT_API_KEY) {
+    Add-Pass "ChatECNU Key" "检测到 ECNU_CHAT_API_KEY（值已隐藏）"
 } else {
-    Add-Warn "模型凭据环境" "未检测到常用变量；稍后在 Pi/DSH 界面登录也可以"
+    Add-Warn "ChatECNU Key" "未检测到 ECNU_CHAT_API_KEY；按环境自查设置自己的 Key"
 }
 
 # Repository files

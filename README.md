@@ -29,6 +29,12 @@ pwsh -NoProfile -File .\scripts\check-student-env.ps1
 第二条命令在当前机器未安装全局 `pi` / `dsh` 时会失败，这是预期结果；先把
 环境补齐，再运行学生实验。
 
+生成只含学生材料、不含助教内部文档和插件答案的压缩包：
+
+```powershell
+pwsh -NoProfile -File .\scripts\build-student-package.ps1
+```
+
 ## 已验证的版本基线
 
 核验日期：2026-11-25。
@@ -43,8 +49,15 @@ Node.js 24 LTS（本次验证时最新 LTS 为 24.22.3）。
 
 ## 模型服务说明
 
-模型 API Key、Base URL 和模型 ID 由课程方在课前确认。请不要把 Key 放进
-`README`、实验报告、截图或 Git。仓库自带的环境检查不会打印 Key。
+本课程统一使用 [ChatECNU](https://chat.ecnu.edu.cn/)：
+
+- Base URL：`https://chat.ecnu.edu.cn/open/api/v1`
+- API 协议：`OpenAI Chat Completions`
+- 模型 ID：`ecnu-plus`、`ecnu-max`
+- Key 环境变量：`ECNU_CHAT_API_KEY`
+
+每位学生使用自己的 Key。请不要把 Key 放进 `README`、实验报告、截图或 Git。
+仓库自带的环境检查不会打印 Key。
 
 本项目发布前已检查该值不会出现在文件、Git 历史或待提交内容中。
 

@@ -7,6 +7,11 @@
 .model-test-*/
 .node24-extract/
 .node-check-*/
+.ecnu-test/
+.ecnu-package-test*/
+.ecnu-final-test/
+.chat-ecnu-main.js
+delivery/
 *.tgz
 *.zip
 

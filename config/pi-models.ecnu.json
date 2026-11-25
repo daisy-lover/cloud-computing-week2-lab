@@ -1,0 +1,15 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "ecnu-chat": {
+      "baseUrl": "https://chat.ecnu.edu.cn/open/api/v1",
+      "api": "openai-completions",
+      "apiKey": "$ECNU_CHAT_API_KEY",
+      "models": [
+        { "id": "ecnu-plus" },
+        { "id": "ecnu-max" }
+      ]
+    }
+  }
+}
+
