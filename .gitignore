@@ -5,6 +5,8 @@
 .runtime-*/
 .student-smoke/
 .model-test-*/
+.node24-extract/
+.node-check-*/
 *.tgz
 *.zip
 
@@ -16,4 +18,3 @@ __pycache__/
 lab-repo/.env
 lab-repo/.env.*
 !lab-repo/.env.example
-
